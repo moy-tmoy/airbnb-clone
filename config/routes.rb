@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/property/:id' => 'static_pages#property'
   get '/login' => 'static_pages#login'
 
+
   namespace :api do 
     # Add routes below this line
     resources :users, only: [:create]
