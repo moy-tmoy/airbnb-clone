@@ -3,7 +3,7 @@ import Layout from "@src/layout";
 import BookingWidget from './bookingWidget';
 import { handleErrors } from "@utils/fetchHelper";
 
-import "./property.scss"
+import "./property.scss";
 
 class Property extends React.Component {
     state = {

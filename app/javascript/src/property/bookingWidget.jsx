@@ -65,6 +65,14 @@ class BookingWidget extends React.Component {
       })
   }
 
+  successPayment = (booking_id) => {
+    return fetch(`/booking/${booking_id}/success`)
+    .then(handleErrors)
+    .then(data => {
+      console.log('data:', data);
+    })
+  }
+
   initiateStripeCheckout = (booking_id) => {
     return fetch(`/api/charges?booking_id=${booking_id}&cancel_url=${window.location.pathname}`, safeCredentials({
       method: 'POST',
@@ -82,6 +90,7 @@ class BookingWidget extends React.Component {
           // If `redirectToCheckout` fails due to a browser or network
           // error, display the localized error message to your customer
           // using `result.error.message`.
+          return this.successPayment();
         });
       })
       .catch(error => {

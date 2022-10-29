@@ -12,5 +12,8 @@ class StaticPagesController < ApplicationController
     render 'login'
   end
 
+  def successPayment
+    render 'success'
+  end 
 end
 
