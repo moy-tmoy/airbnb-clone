@@ -15,5 +15,10 @@ class StaticPagesController < ApplicationController
   def add_property
     render 'add_property'
   end
+
+  def listings
+    @data = { username: params[:username] }.to_json
+    render 'listings'
+  end
 end
 

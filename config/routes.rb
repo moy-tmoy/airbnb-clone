@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/property/:id' => 'static_pages#property'
   get '/login' => 'static_pages#login'
   get '/:username/add-property' => 'static_pages#add_property'
+  get '/:username/listings' => 'static_pages#listings'
   
   # API routes - RAILS Back-end
   
@@ -24,6 +25,7 @@ Rails.application.routes.draw do
     # -> PROPERTIES <-
     resources :properties, only: [:index, :show]
     post '/properties' => 'properties#create'
+    delete '/properties/:id' => 'properties#delete'
     
     # -> BOOKINGS <-
     resources :bookings, only: [:create]
