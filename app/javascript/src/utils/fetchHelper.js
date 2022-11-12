@@ -39,6 +39,16 @@
       headers: Object.assign((options.headers || {}), authenticityHeader(), jsonHeader()),
     });
   }
+
+  // Use this function instead if you are using formData as body when uploading images
+  export function safeCredentialsFormData(options = {}) {
+    return Object.assign(options, {
+      credentials: 'include',
+      mode: 'same-origin',
+      headers: Object.assign((options.headers || {}), authenticityHeader()),
+    });
+  }
+
   
   export function handleErrors(response) {
     if (!response.ok) {
