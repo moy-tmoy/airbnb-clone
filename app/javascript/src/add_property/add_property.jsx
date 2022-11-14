@@ -151,7 +151,7 @@ class AddProperty extends React.Component {
                         <div className="divider my-3"></div>
                             <div className="row g-3 align-items-center py-3">
                                 <div className="col-4">
-                                    <h6>How many guests would you allow to welcome?</h6>
+                                    <h6>How many guests would you like to welcome?</h6>
                                 </div>
                                 <div className="col-3">
                                     <label htmlFor="propertyMaxGuest" className="col-form-label">Max guests</label>

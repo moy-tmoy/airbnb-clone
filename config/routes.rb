@@ -9,23 +9,26 @@ Rails.application.routes.draw do
   get '/login' => 'static_pages#login'
   get '/:username/add-property' => 'static_pages#add_property'
   get '/:username/listings' => 'static_pages#listings'
-  
+  get '/property/:id/edit-property' => 'static_pages#edit_property'
+
   # API routes - RAILS Back-end
   
   namespace :api do 
 
     # -> USERS <-
-    resources :users, only: [:create]
+    post '/users' => 'users#create'
 
     # -> SESSIONS <-
-    resources :sessions, only: %i[create destroy]
+    post '/sessions' => 'sessions#create'
     get '/authenticated' => 'sessions#authenticated'
     delete '/sessions' => 'sessions#destroy'
-    
+
     # -> PROPERTIES <-
-    resources :properties, only: [:index, :show]
+    get '/properties/' => 'properties#index'
+    post '/properties/:id' => 'properties#show'
     post '/properties' => 'properties#create'
-    delete '/properties/:id' => 'properties#delete'
+    patch '/properties/:id' => 'properties#update'
+    delete '/properties/:id' => 'properties#destroy'
     
     # -> BOOKINGS <-
     resources :bookings, only: [:create]

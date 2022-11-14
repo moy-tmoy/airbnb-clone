@@ -164,7 +164,7 @@ class Layout extends React.Component {
             <div className="row no-gutters justify-content-between py-4 footerBar">
               <div className="col-12 col-xl-auto order-2 order-xl-1">
                   <div className="d-xl-flex text-left text-md-center">
-                  <span className="d-block">© 2022 Airbnb, Full Stack Clone by <a href="https://github.com/Franz-Art-L" rel="noopener noreferrer">Francis Artemio Landia</a></span>
+                  <span className="d-block">© 2022 Airbnb, Full Stack Web Application Clone by <a href="https://confident-murdock-8e5bba.netlify.app/">Francis Artemio Landia</a></span>
                     <ul className="list-unstyled d-inline-flex align-items-center p-0 m-0">
                       <li><span className="d-none d-xl-inline px-2"> · </span><a href="#" className="text-dark">Privacy</a></li>
                       <li><span className="px-2"> · </span><a href="#" className="text-dark">Terms</a></li>
