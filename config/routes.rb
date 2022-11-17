@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
   
   # Default home/index page
-  root to: 'static_pages#home'
+  root to: 'static_pages#home' #home page
 
-  # STATIC PAGES - REACT Front-end
-
-  get '/property/:id' => 'static_pages#property'
-  get '/login' => 'static_pages#login'
-  get '/:username/add-property' => 'static_pages#add_property'
-  get '/:username/listings' => 'static_pages#listings'
-  get '/property/:id/edit-property' => 'static_pages#edit_property'
+  # STATIC PAGES - REACT Front-end 
+  get '/login' => 'static_pages#login' # page that will show if you are already loged in
+  get '/property/:id' => 'static_pages#property' # page that will show every property available
+  get '/:username/add-property' => 'static_pages#add_property' # page for adding property
+  get '/:username/listings' => 'static_pages#listings'  # page for user listings of properties
+  get '/property/:id/edit-property' => 'static_pages#edit_property' # page for editing property for user who owns one
+  get '/:username/bookings' => 'static_pages#bookings'
 
   # API routes - RAILS Back-end
   

@@ -42,6 +42,7 @@ module Api
         end
       end
 
+      # stripe webhook
       def mark_complete
 
         # You can find your endpoint's secret in your webhook settings
