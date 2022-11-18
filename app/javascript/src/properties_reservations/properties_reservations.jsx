@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '@src/layout';
-import handleErrors from '@utils/fetchHelper';
+import {handleErrors} from '@utils/fetchHelper';
 // import font awesome icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarDays } from '@fortawesome/free-solid-svg-icons';
