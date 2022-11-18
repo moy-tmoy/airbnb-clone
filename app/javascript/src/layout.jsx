@@ -88,11 +88,6 @@ class Layout extends React.Component {
                   <li><a href={`/${username}/listings`}>Listings</a></li>
                   <li><a href={`/${username}/reservations`}>Reservations</a></li>
                   <li><a href={`/${username}/add-property`}>Add a new property</a></li>
-                  <div className='divider'></div>
-                  <li><a href="#">Guidebooks</a></li>
-                  <li><a href="#">Transaction history</a></li>
-                  <li><a href="#">Explore hosting resources</a></li>
-                  <li><a href="#">Visit our community forum</a></li>
                 </ul>
               </div>) 
               

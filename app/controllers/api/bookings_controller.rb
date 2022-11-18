@@ -23,6 +23,29 @@ module Api
         @bookings = property.bookings.where("end_date > ? ", Date.today)
         render 'api/bookings/index'
       end
+
+      def get_user_properties_bookings
+        user = User.find_by(username: params[:username])
+
+        if user
+          @bookings = []
+
+          user.properties.each do |property|
+            @bookings += property.bookings
+          end
+        end
+
+        render 'api/bookings/index'
+      end
+
+      def index_by_user
+        user = User.find_by(username: params[:username])
+
+        if user
+          @bookings = user.bookings
+          render 'api/bookings/index'
+        end
+      end
   
       private
   
