@@ -78,10 +78,12 @@ class listings extends React.Component {
                             <div className="row d-flex flex-column px-3">
                                 <h5 className="mb-2">{property.title}</h5>
                             <div className="d-flex">
-                            <p className="mb-0 pr-1 text-secondary">{property.property_type} in</p>
-                            <p className="mb-0 pr-1 text-secondary">{property.city},</p>
-                            <p className="mb-0 pr-1 text-secondary">{property.country}</p>
-                        </div>
+                                <div className='col-8'>
+                                <p className="mb-0 pr-1 text-secondary">{property.property_type} in </p>
+                                <p className="mb-0 pr-1 text-secondary"> {property.city},</p> 
+                                <p className="mb-0 pr-1 text-secondary">{property.country}</p>
+                                </div>
+                            </div>
                         <div className="d-flex mb-2">
                             <p className="mb-0 text-secondary">{property.max_guests} guests</p>
                             <p className="mb-0 text-secondary"><span className="px-2">·</span>{property.bedrooms} bedrooms</p>

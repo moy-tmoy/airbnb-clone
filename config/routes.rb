@@ -6,13 +6,14 @@ Rails.application.routes.draw do
   # STATIC PAGES - REACT Front-end 
 
   get '/login'                                 => 'static_pages#login'                      # page that will show if you are already loged in
-  get '/property/:id'                          => 'static_pages#property'                   # page that will show every property available
+  get '/property/:id'                          => 'static_pages#property'                   # page that will show the specific property
   get '/:username/add-property'                => 'static_pages#add_property'               # page for adding property
   get '/:username/listings'                    => 'static_pages#listings'                   # page for user listings of properties
   get '/property/:id/edit-property'            => 'static_pages#edit_property'              # page for editing property for user who owns one
   get '/:username/bookings'                    => 'static_pages#bookings'                   # page for see user bookings
   get '/:username/reservations'                => 'static_pages#reservations'               # page to see user owned property reservations
-  get '/property/:id/reservations'             => 'static_pages#properties_reservations'      # page to see reservations to each of the property
+  get '/property/:id/reservations'             => 'static_pages#properties_reservations'    # page to see reservations to each of the property
+  get '/bookings/:id/success'                  => 'static_pages#successful_booking'         # page to see the success of the booking the user made
 
   # API routes - RAILS Back-end
 
@@ -24,17 +25,19 @@ Rails.application.routes.draw do
     # -> SESSIONS <-
     post '/sessions'                           => 'sessions#create'
     get '/authenticated'                       => 'sessions#authenticated'
+    get  '/sessions/:id'                       => 'sessions#show'
     delete '/sessions'                         => 'sessions#destroy'
 
     # -> PROPERTIES <-
     post '/properties'                         => 'properties#create'
     get '/properties/'                         => 'properties#index'
     get '/properties/:id'                      => 'properties#show'
+    get '/users/:username/properties'          => 'properties#index_by_user'
     patch '/properties/:id'                    => 'properties#update'
     delete '/properties/:id'                   => 'properties#destroy'
     
     # -> BOOKINGS <-
-    resources :bookings, only: [:create]
+    resources :bookings, only: [:create, :show]
     get '/properties/:id/bookings'             => 'bookings#get_property_bookings'
       
     get '/users/:username/properties/bookings' => 'bookings#get_user_properties_bookings'  # user own properties bookings

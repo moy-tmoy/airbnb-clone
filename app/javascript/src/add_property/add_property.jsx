@@ -32,7 +32,7 @@ class AddProperty extends React.Component {
 
     addFile = e => {
         this.setState({
-            [e.target.name]: e.target.file[0],
+            [e.target.name]: e.target.files[0],
         });
     }
 
@@ -57,7 +57,7 @@ class AddProperty extends React.Component {
 
         fetch('/api/properties', safeCredentialsFormData({
             method: 'POST',
-            body: FormData,
+            body: formData,
         }))
         .then(handleErrors)
         .then(data => {

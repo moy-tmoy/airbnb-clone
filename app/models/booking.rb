@@ -15,7 +15,6 @@ class Booking < ApplicationRecord
       self.charges.pluck(:complete).include?(true)
     end
   
-  
     private
   
     def check_start_date_smaller_than_end_date

@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '@src/layout';
-import {handleErrors} from '@utils/fetchHelper';
+import {handleErrors} from '@utils/fetchHelper'; //always add curly braces on this one for you not to encounter heroku issue: Browserslist: caniuse-lite is outdated. 
 // import font awesome icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarDays } from '@fortawesome/free-solid-svg-icons';
@@ -22,7 +22,7 @@ class PropertiesReservations extends React.Component {
     }
 
     getAllPropertiesReservations() {
-        fetch(`/api/properties/${this.props.date.property_id}/bookings`)
+        fetch(`/api/properties/${this.props.data.property_id}/bookings`)
         .then(handleErrors)
         .then(data => {
             console.log('data: ', data);

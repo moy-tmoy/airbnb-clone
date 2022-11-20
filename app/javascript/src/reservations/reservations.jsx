@@ -86,7 +86,7 @@ class Reservations extends React.Component {
                                     <div className='col-2'>
                                         <p className='mb-2'>{booking.property.title}</p>
                                     </div>
-                                    <div className='col-2'> 
+                                    <div className='col-1'> 
                                         <p className='mb-2'>{booking.property.id}</p>
                                     </div>
                                     <div className='col-1'>

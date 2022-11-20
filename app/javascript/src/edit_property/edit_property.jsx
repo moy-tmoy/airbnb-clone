@@ -29,7 +29,7 @@ class EditProperty extends React.Component {
         })
     }
 
-    copyPropertyAttributes(property) {
+    copyPropertyAttributes = property => {
         for(let attributes in property) {
             this.setState({
                 [attributes]: property[attributes],
