@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '@src/layout';
-import {safeCredentials, handleErrors} from '@utils/fetchHelper';
+import {handleErrors} from '@utils/fetchHelper';
 import './reservations.scss';
 
 class Reservations extends React.Component {
