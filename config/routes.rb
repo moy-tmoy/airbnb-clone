@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   get '/property/:id/edit-property'            => 'static_pages#edit_property'              # page for editing property for user who owns one
   get '/:username/bookings'                    => 'static_pages#bookings'                   # page for see user bookings
   get '/:username/reservations'                => 'static_pages#reservations'               # page to see user owned property reservations
-  get '/property/:id/reservations'             => 'static_pages#properties_reservations'    # page to see reservations to each of the property
   get '/bookings/:id/success'                  => 'static_pages#successful_booking'         # page to see the success of the booking the user made
 
   # API routes - RAILS Back-end
@@ -38,11 +37,11 @@ Rails.application.routes.draw do
     
     # -> BOOKINGS <-
     resources :bookings, only: [:create, :show]
-    get '/properties/:id/bookings'             => 'bookings#get_property_bookings'
-      
-    get '/users/:username/properties/bookings' => 'bookings#get_user_properties_bookings'  # user own properties bookings
 
-    get '/users/:username/bookings'            => 'bookings#index_by_user'                 # users/guests bookings to each properties
+      
+    get '/users/:username/properties/bookings' => 'bookings#get_user_properties_bookings'
+
+    get '/users/:username/bookings'            => 'bookings#index_by_user'                 
 
     # -> CHARGES <-
     resources :charges, only: [:create]

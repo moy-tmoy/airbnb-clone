@@ -3,12 +3,12 @@
     border-radius: 15px;
   }
   
-  .reservations-wrap , .reservations-header-row {
+.reservations-wrap , .reservations-header-row {
   font-size: 14px;
-  }
+}
   
-  .property-image {
+.property-image {
     padding-top: calc(2 / 3 * 100%); /* aspect ratio 2:3 */
     background-size: cover;
     background-position: center;
-  }
+}

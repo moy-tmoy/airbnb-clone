@@ -1,1 +1,0 @@
-import '@src/properties_reservations';

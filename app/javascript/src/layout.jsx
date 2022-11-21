@@ -85,9 +85,9 @@ class Layout extends React.Component {
               
               (<div className='hosting-menu'>
                 <ul className='list-unstyled'>
+                  <li><a href={`/${username}/add-property`}>Add a new property</a></li>
                   <li><a href={`/${username}/listings`}>Listings</a></li>
                   <li><a href={`/${username}/reservations`}>Reservations</a></li>
-                  <li><a href={`/${username}/add-property`}>Add a new property</a></li>
                 </ul>
               </div>) 
               

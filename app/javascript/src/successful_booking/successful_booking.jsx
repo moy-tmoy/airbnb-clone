@@ -17,7 +17,7 @@ class SuccessfulBooking extends React.Component {
 
   componentDidMount() {
     const booking_id = this.props.booking_id;
-    // console.log(booking_id);
+    
 
     fetch(`/api/bookings/${booking_id}`)
       .then(handleErrors)
@@ -63,7 +63,11 @@ class SuccessfulBooking extends React.Component {
         <div className="row">
           <div className="col-6 my-4">
             <div className="p-4">
-              <h2>It's official! Now, start preparing for your trip.</h2>
+              <h2>Congratulations!</h2>
+              <h3>Your booking is successful!🎉</h3>
+              <br></br>
+              <h4>Now start preparing for your trip.</h4>
+              <br></br>
               <p>You have a confirmed reservation with {property.user.username}. We've emailed your itinerary to {user.email}.</p>
               <div className="my-5">
                 <h6>Email your itinerary to anyone</h6>

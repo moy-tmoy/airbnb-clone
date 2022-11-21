@@ -94,10 +94,11 @@ class listings extends React.Component {
                             <div className="d-flex mb-2">
                                 <p className="mb-0 text-secondary">$ {property.price_per_night} per night</p>
                             </div>
+                            
                             <div className="d-flex">
-                                <a className="btn btn-danger btn-sm btn-edit mr-2 mt-2" role="button" href={`/property/${property.id}/edit-property`}>Edit property</a>
-                                <a className="btn btn-danger btn-sm btn-edit mr-2 mt-2" role="button" href={`/property/${property.id}/reservations`}>View property reservations</a>
-                                <button type="submit" className="btn btn-danger btn-sm btn-delete ml-auto mr-2 mt-2" onClick={this.removeProperty}>Delete property</button>
+                                <div><a className="btn btn-danger btn-sm btn-edit mr-2 mt-2" role="button" href={`/property/${property.id}/edit-property`}>Edit property</a></div>
+                                <div className='delete-button-div'><button type="submit" className="btn btn-danger btn-sm btn-delete ml-auto mr-2 mt-2" onClick={this.removeProperty}>Delete property</button></div>
+                                
                             </div>
                         </div>
                      </div>
