@@ -38,7 +38,6 @@ Rails.application.routes.draw do
     # -> BOOKINGS <-
     resources :bookings, only: [:create, :show]
 
-      
     get '/users/:username/properties/bookings' => 'bookings#get_user_properties_bookings'
 
     get '/users/:username/bookings'            => 'bookings#index_by_user'                 
