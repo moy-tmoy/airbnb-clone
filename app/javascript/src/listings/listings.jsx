@@ -79,8 +79,8 @@ class listings extends React.Component {
                                 <h5 className="mb-2">{property.title}</h5>
                             <div className="d-flex">
                                 <div className='col-8'>
-                                <p className="mb-0 pr-1 text-secondary">{property.property_type} in </p>
-                                <p className="mb-0 pr-1 text-secondary"> {property.city},</p> 
+                                <p className="mb-0 pr-1 text-secondary font-italic">{property.property_type} in <span className="mb-0 pr-1 text-secondary"> {property.city}</span></p>
+                                
                                 <p className="mb-0 pr-1 text-secondary">{property.country}</p>
                                 </div>
                             </div>
