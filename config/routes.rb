@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/:username/add-property'                => 'static_pages#add_property'               # page for adding property
   get '/:username/listings'                    => 'static_pages#listings'                   # page for user listings of properties
   get '/property/:id/edit-property'            => 'static_pages#edit_property'              # page for editing property for user who owns one
-  get '/:username/bookings'                    => 'static_pages#bookings'                   # page for see user bookings
+  get '/:username/bookings'                    => 'static_pages#bookings'                   # page to see user bookings
   get '/:username/reservations'                => 'static_pages#reservations'               # page to see user owned property reservations
   get '/bookings/:id/success'                  => 'static_pages#successful_booking'         # page to see the success of the booking the user made
 
