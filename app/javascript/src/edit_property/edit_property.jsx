@@ -22,7 +22,7 @@ class EditProperty extends React.Component {
         .then(handleErrors)
         .then(data => {
             console.log('data: ', data);
-            this.copyPropertyAttributes();
+            this.copyPropertyAttributes(data.property);
             this.setState({
                 property: data.property
             })
