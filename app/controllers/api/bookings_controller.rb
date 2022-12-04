@@ -17,7 +17,7 @@ module Api
       end
   
       # I commented out this method since this is not use on the app, but maybe soon I'll add this feature to view reservations on each property
-      
+
       # def get_property_bookings
       #   property = Property.find_by(id: params[:id])
       #   return render json: { error: 'cannot find property' }, status: :not_found if !property
@@ -49,11 +49,13 @@ module Api
         end
       end
 
-      def show
-        @booking = Booking.find_by(id:params[:id])
-        return render json: { error: 'Cannot find booking' }, status: :not_found if !@booking
-        render 'api/bookings/show'
-      end
+      # I commented out this show method since this method is not use in the app, maybe I will add this feature soon.
+
+      # def show
+      #   @booking = Booking.find_by(id:params[:id])
+      #   return render json: { error: 'Cannot find booking' }, status: :not_found if !@booking
+      #   render 'api/bookings/show'
+      # end
   
       private
   

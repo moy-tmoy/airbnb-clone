@@ -36,7 +36,7 @@ Rails.application.routes.draw do
     delete '/properties/:id'                   => 'properties#destroy'
     
     # -> BOOKINGS <-
-    resources :bookings, only: [:create, :show]
+    resources :bookings, only: [:create]
 
     get '/users/:username/properties/bookings' => 'bookings#get_user_properties_bookings'
 
