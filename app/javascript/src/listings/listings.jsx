@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import './listings.scss';
 
-class listings extends React.Component {
+class Listings extends React.Component {
     constructor(props) {
         super(props)
 
@@ -119,7 +119,7 @@ class listings extends React.Component {
     }
 }
 
-export default listings;
+export default Listings;
 
 
 

@@ -12,6 +12,8 @@ class Property extends React.Component {
     }
 
     componentDidMount() {
+        console.log(process.env.STRIPE_PUBLISHABLE_KEY) // to test if the variables are exposed.
+
         fetch(`/api/properties/${this.props.property_id}`)
         .then(handleErrors)
         .then(data => {

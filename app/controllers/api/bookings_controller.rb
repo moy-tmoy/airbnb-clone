@@ -15,16 +15,14 @@ module Api
           render json: { error: e.message }, status: :bad_request
         end
       end
-  
-      # I commented out this method since this is not use on the app, but maybe soon I'll add this feature to view reservations on each property
 
-      # def get_property_bookings
-      #   property = Property.find_by(id: params[:id])
-      #   return render json: { error: 'cannot find property' }, status: :not_found if !property
+      def get_property_bookings
+        property = Property.find_by(id: params[:id])
+        return render json: { error: 'cannot find property' }, status: :not_found if !property
   
-      #   @bookings = property.bookings.where("end_date > ? ", Date.today)
-      #   render 'api/bookings/index'
-      # end
+        @bookings = property.bookings.where("end_date > ? ", Date.today)
+        render 'api/bookings/index'
+      end
 
       def get_user_properties_bookings
         user = User.find_by(username: params[:username])
@@ -49,13 +47,11 @@ module Api
         end
       end
 
-      # I commented out this show method since this method is not use in the app, maybe I will add this feature soon.
-
-      # def show
-      #   @booking = Booking.find_by(id:params[:id])
-      #   return render json: { error: 'Cannot find booking' }, status: :not_found if !@booking
-      #   render 'api/bookings/show'
-      # end
+      def show
+        @booking = Booking.find_by(id:params[:id])
+        return render json: { error: 'Cannot find booking' }, status: :not_found if !@booking
+        render 'api/bookings/show'
+      end
   
       private
   
