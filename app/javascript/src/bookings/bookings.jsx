@@ -118,7 +118,7 @@ class Bookings extends React.Component {
                     </div>
                     :
                     <div className="py-4 border border-secondary rounded text-center">
-                        <p className="mb-1">Your don't have any active bookings at the moment.</p>
+                        <p className="mb-1">You don't have any active bookings at the moment.</p>
                         <a className="text-danger" href="/">Discover properties</a>
                     </div>
 

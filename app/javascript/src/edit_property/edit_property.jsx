@@ -8,8 +8,9 @@ class EditProperty extends React.Component {
         super(props);
 
         this.state = {
-            property: {},
+         
             username: '',
+            
         }
     }
 
@@ -23,9 +24,7 @@ class EditProperty extends React.Component {
         .then(data => {
             console.log('data: ', data);
             this.copyPropertyAttributes(data.property);
-            this.setState({
-                property: data.property
-            })
+          
         })
     }
 

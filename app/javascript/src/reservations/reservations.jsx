@@ -78,7 +78,7 @@ class Reservations extends React.Component {
 
                             {userPropertyBookings.map(booking => {
                                 return(
-                                    <div key={booking.id} id={booking.id} className='reservations-wrap p-4 mb-3'>
+                            <div key={booking.id} id={booking.id} className='reservations-wrap p-4 mb-3'>
                                 <div className='row no-gutters d-flex justify-content-between align-items-center text-center'>
                                     <div className='col-2'>
                                         <div className='property-image rounded' style={{backgroundImage: `url(${booking.property.image})`}}></div>
