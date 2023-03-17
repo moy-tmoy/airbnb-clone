@@ -102,8 +102,8 @@ class Bookings extends React.Component {
 
                                                 <>
                                                     <div className='d-flex justify-content-between'>
-                                                        <p></p>
-                                                        <p></p>
+                                                    <p className='mb-1'>Payment status</p>
+                                                    <p className='mb-1 text-warning'>PENDING</p>
                                                     </div>
                                                     <button type='submit' className='btn btn-danger mt-3' onClick={this.initiateStripeCheckout}>Please proceed to checkout</button>
                                                 </>

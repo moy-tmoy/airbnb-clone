@@ -24,7 +24,6 @@ Rails.application.routes.draw do
     # -> SESSIONS <-
     post '/sessions'                           => 'sessions#create'
     get '/authenticated'                       => 'sessions#authenticated'
-    get  '/sessions/:id'                       => 'sessions#show'
     delete '/sessions'                         => 'sessions#destroy'
 
     # -> PROPERTIES <-

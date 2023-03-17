@@ -4,7 +4,6 @@ import Layout from '@src/layout';
 import LoginWidget from './loginWidget';
 import SignupWidget from './signupWidget';
 import { handleErrors } from '@utils/fetchHelper';
-
 import './login.scss';
 
 class Login extends React.Component {
