@@ -1,13 +1,18 @@
+database:
+  - name: airbnb-clone
+    databaseName: fswd_airbnb_clone_eocn
+    user: fswd_airbnb_clone_eocn_user
+
 services:
   - type: web
-    name: fswd-airbnb-clone
+    name: moytmoy
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: lessons
+          name: airbnb-clone
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
