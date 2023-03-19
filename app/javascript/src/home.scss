@@ -149,6 +149,7 @@ footer {
 
 .footerColumn a {
   font-size: 14px;
+  text-decoration: none;
 }
 
 .footerColumn a:hover {
@@ -158,6 +159,14 @@ footer {
 .footerColumn li {
   font-size: 14px;
   line-height: 1.28571;
+}
+
+.privacyTermsSitemap a {
+  text-decoration: none;
+}
+
+.privacyTermsSitemap a:hover {
+    text-decoration: underline;
 }
 
 /* Footer bar */
